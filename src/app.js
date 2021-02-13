@@ -4,9 +4,6 @@ const path = require('path');
 const methodOverride = require('method-override');
 const notasRouter = require('./routes/notasRouter');
  
-//Motor de vistas
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
 
 app.use(express.urlencoded({ estended: false }));
 app.use(express.json());
@@ -16,6 +13,9 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, '../public')));
 //rutas
 app.use('/', notasRouter);
+//Motor de vistas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
 //serviodr
 app.listen(3000, function () {

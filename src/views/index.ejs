@@ -21,26 +21,27 @@
 
     <main>
         <section class="new">
-            <form method="POST" action="/?_method=PUT">
+            <form method="POST" action="/create">
                 <input type="text" name="title" placeholder="Título">
-                <textarea name="" id="" cols="30" placeholder="Añade una nota..."></textarea>
+                <textarea name="message" id="" cols="30" placeholder="Añade una nota..."></textarea>
                 <button type="submit">Crear</button>
             </form>
         </section>
         <section class="list">
-            <% if(typeof notas != "undefined" && notas.length > 0) { %>
                 <%for (let i = 0; i < notas.length; i++) { %>
+                   
             <div class="note">
                 <h2><%= notas[i].titulo %></h2>
                 <p><%= notas[i].texto %></p>
                 <div class="edit">
                     <a href="/edit/<%= notas[i].id%>"><i class="far fa-edit"></i></a>
                     
-                    <form method="POST" action="/<%= notas[i].id%>?_method=DELETE">
+                    <form method="POST" action="/delete/<%= notas[i].id%>?_method=DELETE">
                         <button type="submit"><i class="far fa-trash-alt"></i></button>
                     </form>
                 </div>
             </div>
+            <%}%>
         </section>
     </main>
 

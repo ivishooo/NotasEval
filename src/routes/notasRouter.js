@@ -1,11 +1,11 @@
 const express = require('express');
 const notasRouter = express.Router();
-const notesController = require('../controllers/notesController');
+const notasController = require('../controllers/notasController');
 
-notasRouter.get('/', notesController.index);
-notasRouter.put('/', notesController.create);
+notasRouter.get('/', notasController.index);
+notasRouter.post('/create', notasController.create);
 notasRouter.get('/edit/:id', notasController.edit);
 notasRouter.put('/edit/:id', notasController.upload);
-notasRouter.delete('/:id', notasController.delete);
+notasRouter.delete('/delete/:id', notasController.delete);
 
-module.exports = notesRouter;
+module.exports = notasRouter;
