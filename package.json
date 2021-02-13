@@ -1,0 +1,26 @@
+{
+  "name": "notaseval",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivishooo/NotasEval.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivishooo/NotasEval/issues"
+  },
+  "homepage": "https://github.com/ivishooo/NotasEval#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7"
+  }
+}
